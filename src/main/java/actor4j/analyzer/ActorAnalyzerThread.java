@@ -38,6 +38,7 @@ public abstract class ActorAnalyzerThread extends Thread {
 	protected AtomicLong counter;
 	
 	protected Timer timer;
+	protected TimerTask timerTask;
 	protected long period;
 	
 	public ActorAnalyzerThread(long period) {
@@ -49,6 +50,12 @@ public abstract class ActorAnalyzerThread extends Thread {
 		counter = new AtomicLong(0);
 		
 		timer = new Timer();
+		timerTask = new TimerTask() {
+			@Override
+			public void run() {
+				update(system.getCells());
+			}
+		};
 		this.period = period;
 	}
 	
@@ -76,12 +83,7 @@ public abstract class ActorAnalyzerThread extends Thread {
 	
 	@Override
 	public void run() {
-		timer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				update(system.getCells());
-			}
-		}, 0, period);
+		timer.schedule(timerTask, 0, period);
 		
 		boolean hasNextOuter  = false;
 		
