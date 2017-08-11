@@ -15,6 +15,8 @@
  */
 package actor4j.analyzer;
 
+import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
@@ -30,9 +32,18 @@ public class AnalyzerActorMessageDispatcher extends DefaultActorMessageDispatche
 	@Override
 	public void post(ActorMessage<?> message, UUID source, String alias) {
 		if (alias!=null) {
-			UUID dest = system.getAliases().get(alias);
-			if (dest!=null)
-				message.dest = dest;
+			List<UUID> destinations = system.getActorsFromAlias(alias);
+
+			UUID dest = null;
+			if (!destinations.isEmpty()) {
+				if (destinations.size()==1)
+					dest = destinations.get(0);
+				else {
+					Random random = new Random();
+					dest = destinations.get(random.nextInt(destinations.size()));
+				}
+			}
+			message.dest = (dest!=null) ? dest : UUID_ALIAS;
 		}
 		analyze(message);
 		super.post(message, source, alias);
