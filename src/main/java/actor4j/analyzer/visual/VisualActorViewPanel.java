@@ -16,8 +16,9 @@
 package actor4j.analyzer.visual;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JTabbedPane;
@@ -55,12 +56,14 @@ public abstract class VisualActorViewPanel extends JPanel {
 		tabbedPane = new JTabbedPane(JTabbedPane.BOTTOM, JTabbedPane.SCROLL_TAB_LAYOUT);
 		add(tabbedPane);
 		
+		paDesign = new JPanel();
+		paDesign.setLayout(new BorderLayout());
+		
+		/*
 		popupMenu = new JPopupMenu();
 		JMenuItem saveAsPicture = new JMenuItem("Save as picture...");
 		popupMenu.add(saveAsPicture);
-		
-		paDesign = new JPanel();
-		paDesign.setLayout(new BorderLayout());
+		*/
 		
 		graph = new mxGraph();
         parent = graph.getDefaultParent();
@@ -71,7 +74,39 @@ public abstract class VisualActorViewPanel extends JPanel {
 		graph.setKeepEdgesInBackground(true);
 
         graphComponent = new mxGraphComponent(graph);
-		graphComponent.setEnabled(false);
+		graphComponent.setEnabled(true);
+		graphComponent.setComponentPopupMenu(popupMenu);/*
+		graphComponent.getGraphControl().addMouseListener(new MouseAdapter() {
+			public void mousePressed​(MouseEvent e) {
+				mouseReleased​(e);
+			}
+			
+			public void mouseReleased​(MouseEvent e) {
+				if (e.isPopupTrigger()) {
+					Point point = SwingUtilities.convertPoint(e.getComponent(), e.getPoint(), graphComponent);
+					popupMenu.show(graphComponent, point.x, point.y);
+					
+					e.consume();
+				}
+			}
+		});*/
+		graphComponent.getGraphControl().addMouseWheelListener(new MouseWheelListener() {
+			@Override
+			public void mouseWheelMoved(MouseWheelEvent event) {
+				double scale = graph.getView().getScale();
+				
+				if (!event.isControlDown())
+					return;
+
+				if (event.getWheelRotation() < 0) {
+					if (scale < 100)
+						graphComponent.zoomIn();
+				} else
+					if (scale > 0) {
+						graphComponent.zoomOut();
+		      }
+			}
+		});
 		
 		paDesign.add(graphComponent, BorderLayout.CENTER);
 	}
@@ -105,6 +140,10 @@ public abstract class VisualActorViewPanel extends JPanel {
 		int gap = 5;
 		
 		mxGraphView view = graphComponent.getGraph().getView();
+		/*
+		if (view.getScale()<1.0)
+			return;
+		*/
 		mxRectangle r = view.getGraphBounds();
 		double scale = Math.min(
 			(double)graphComponent.getWidth() /(r.getX()+r.getWidth() +gap), 
