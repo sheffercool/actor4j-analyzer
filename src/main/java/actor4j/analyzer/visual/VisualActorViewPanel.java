@@ -17,7 +17,9 @@ package actor4j.analyzer.visual;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JTabbedPane;
 
 import com.mxgraph.swing.mxGraphComponent;
@@ -33,6 +35,7 @@ public abstract class VisualActorViewPanel extends JPanel {
 	protected ActorSystemImpl system;
 
 	protected JTabbedPane tabbedPane;
+	protected JPopupMenu popupMenu;
 	
 	protected JPanel paDesign;
 	protected mxGraphComponent graphComponent;
@@ -51,6 +54,10 @@ public abstract class VisualActorViewPanel extends JPanel {
 		setLayout(new BorderLayout(0, 0));
 		tabbedPane = new JTabbedPane(JTabbedPane.BOTTOM, JTabbedPane.SCROLL_TAB_LAYOUT);
 		add(tabbedPane);
+		
+		popupMenu = new JPopupMenu();
+		JMenuItem saveAsPicture = new JMenuItem("Save as picture...");
+		popupMenu.add(saveAsPicture);
 		
 		paDesign = new JPanel();
 		paDesign.setLayout(new BorderLayout());
