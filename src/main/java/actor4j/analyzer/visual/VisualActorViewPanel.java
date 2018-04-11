@@ -74,7 +74,7 @@ public abstract class VisualActorViewPanel extends JPanel {
 		graph.setKeepEdgesInBackground(true);
 
         graphComponent = new mxGraphComponent(graph);
-		graphComponent.setEnabled(true);
+		graphComponent.setEnabled(false);
 		graphComponent.setComponentPopupMenu(popupMenu);/*
 		graphComponent.getGraphControl().addMouseListener(new MouseAdapter() {
 			public void mousePressed​(MouseEvent e) {

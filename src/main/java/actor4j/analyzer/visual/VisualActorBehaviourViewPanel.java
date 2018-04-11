@@ -20,6 +20,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
+import com.mxgraph.layout.mxCircleLayout;
+import com.mxgraph.layout.mxCompactTreeLayout;
 import com.mxgraph.layout.mxFastOrganicLayout;
 import com.mxgraph.layout.mxParallelEdgeLayout;
 import com.mxgraph.model.mxCell;
@@ -143,8 +145,9 @@ public class VisualActorBehaviourViewPanel extends VisualActorViewPanel  {
 			layout.setDisableEdgeStyle( false); 	// true transforms the edges and makes them direct lines
 			layout.execute(graph.getDefaultParent());
 
+			new mxCompactTreeLayout(graph).execute(graph.getDefaultParent());
 			//new mxCircleLayout(graph).execute(graph.getDefaultParent());
-			new mxParallelEdgeLayout(graph).execute(graph.getDefaultParent());
+			//new mxParallelEdgeLayout(graph).execute(graph.getDefaultParent());
 		}
 		
 		fitViewport();
