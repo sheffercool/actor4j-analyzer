@@ -60,11 +60,12 @@ public class AnalyzerActorSystemImpl extends DefaultActorSystemImpl {
 		return analyzeMode;
 	}
 	
-	public void start(Runnable onTermination) {
+	@Override
+	public void start(Runnable onStartup, Runnable onTermination) {
 		if (!executerService.isStarted())
 			if (analyzeMode.get())
 				analyzerThread.start();
-		super.start(onTermination);
+		super.start(onStartup, onTermination);
 	}
 	
 	@Override
