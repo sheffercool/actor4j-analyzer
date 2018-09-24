@@ -145,9 +145,9 @@ public class VisualActorBehaviourViewPanel extends VisualActorViewPanel  {
 			layout.setDisableEdgeStyle( false); 	// true transforms the edges and makes them direct lines
 			layout.execute(graph.getDefaultParent());
 
-			new mxCompactTreeLayout(graph).execute(graph.getDefaultParent());
+			//new mxCompactTreeLayout(graph).execute(graph.getDefaultParent());
 			//new mxCircleLayout(graph).execute(graph.getDefaultParent());
-			//new mxParallelEdgeLayout(graph).execute(graph.getDefaultParent());
+			new mxParallelEdgeLayout(graph).execute(graph.getDefaultParent());
 		}
 		
 		fitViewport();
