@@ -21,6 +21,7 @@ import java.util.UUID;
 import java.util.function.BiConsumer;
 
 import actor4j.core.ActorSystemImpl;
+import actor4j.core.ActorThread;
 import actor4j.core.DefaultActorMessageDispatcher;
 import actor4j.core.messages.ActorMessage;
 
@@ -50,7 +51,7 @@ public class AnalyzerActorMessageDispatcher extends DefaultActorMessageDispatche
 	}
 	
 	@Override
-	protected void postQueue(ActorMessage<?> message, BiConsumer<Long, ActorMessage<?>> biconsumer) {
+	protected void postQueue(ActorMessage<?> message, BiConsumer<ActorThread, ActorMessage<?>> biconsumer) {
 		analyze(message);
 		super.postQueue(message, biconsumer);
 	}
