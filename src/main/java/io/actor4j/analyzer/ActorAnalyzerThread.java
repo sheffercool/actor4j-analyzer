@@ -24,10 +24,10 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicLong;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
-import cloud.actor4j.core.ActorThreadMode;
-import cloud.actor4j.core.messages.ActorMessage;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorThreadMode;
+import io.actor4j.core.messages.ActorMessage;
 
 public abstract class ActorAnalyzerThread extends Thread {
 	protected Queue<ActorMessage<?>> outerQueueL2;

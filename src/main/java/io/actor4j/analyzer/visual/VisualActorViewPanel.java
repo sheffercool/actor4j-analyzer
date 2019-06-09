@@ -28,7 +28,7 @@ import com.mxgraph.util.mxRectangle;
 import com.mxgraph.view.mxGraph;
 import com.mxgraph.view.mxGraphView;
 
-import cloud.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorSystemImpl;
 
 public abstract class VisualActorViewPanel extends JPanel {
 	protected static final long serialVersionUID = 2646158450651956287L;

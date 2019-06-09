@@ -17,10 +17,10 @@ package io.actor4j.analyzer;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import cloud.actor4j.core.ActorSystem;
-import cloud.actor4j.core.ActorSystemImpl;
-import cloud.actor4j.core.ActorThreadMode;
-import cloud.actor4j.core.DefaultActorSystemImpl;
+import io.actor4j.core.ActorSystem;
+import io.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorThreadMode;
+import io.actor4j.core.DefaultActorSystemImpl;
 
 public class AnalyzerActorSystemImpl extends DefaultActorSystemImpl {
 	protected AtomicBoolean analyzeMode;

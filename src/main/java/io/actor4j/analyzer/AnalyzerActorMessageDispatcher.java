@@ -20,10 +20,10 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-import cloud.actor4j.core.ActorSystemImpl;
-import cloud.actor4j.core.ActorThread;
-import cloud.actor4j.core.DefaultActorMessageDispatcher;
-import cloud.actor4j.core.messages.ActorMessage;
+import io.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorThread;
+import io.actor4j.core.DefaultActorMessageDispatcher;
+import io.actor4j.core.messages.ActorMessage;
 
 public class AnalyzerActorMessageDispatcher extends DefaultActorMessageDispatcher {
 	public AnalyzerActorMessageDispatcher(ActorSystemImpl system) {

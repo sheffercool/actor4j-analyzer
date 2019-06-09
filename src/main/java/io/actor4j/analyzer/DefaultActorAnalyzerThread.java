@@ -21,9 +21,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.swing.SwingUtilities;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
-import cloud.actor4j.core.messages.ActorMessage;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.messages.ActorMessage;
 import io.actor4j.analyzer.visual.VisualActorAnalyzer;
 
 public class DefaultActorAnalyzerThread extends ActorAnalyzerThread {

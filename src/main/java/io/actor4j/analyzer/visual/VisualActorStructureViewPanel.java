@@ -24,8 +24,8 @@ import java.util.UUID;
 import com.mxgraph.layout.mxFastOrganicLayout;
 import com.mxgraph.layout.mxParallelEdgeLayout;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
 
 public class VisualActorStructureViewPanel extends VisualActorViewPanel {
 	protected static final long serialVersionUID = -1192782222987329027L;

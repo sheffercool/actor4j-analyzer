@@ -24,8 +24,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
 
 public class VisualActorFrame extends JFrame {
 	protected static final long serialVersionUID = 6808210435112913511L;

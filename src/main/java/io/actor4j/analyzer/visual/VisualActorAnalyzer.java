@@ -19,8 +19,8 @@ import java.awt.event.WindowEvent;
 import java.util.Map;
 import java.util.UUID;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
 import tools4j.utils.SwingSubApplication;
 
 public class VisualActorAnalyzer {

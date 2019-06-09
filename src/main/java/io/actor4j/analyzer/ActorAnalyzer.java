@@ -15,7 +15,7 @@
  */
 package io.actor4j.analyzer;
 
-import cloud.actor4j.core.ActorSystem;
+import io.actor4j.core.ActorSystem;
 
 public class ActorAnalyzer extends ActorSystem {
 

@@ -26,8 +26,8 @@ import com.mxgraph.layout.mxFastOrganicLayout;
 import com.mxgraph.layout.mxParallelEdgeLayout;
 import com.mxgraph.model.mxCell;
 
-import cloud.actor4j.core.ActorCell;
-import cloud.actor4j.core.ActorSystemImpl;
+import io.actor4j.core.ActorCell;
+import io.actor4j.core.ActorSystemImpl;
 
 import java.util.Map.Entry;
 
