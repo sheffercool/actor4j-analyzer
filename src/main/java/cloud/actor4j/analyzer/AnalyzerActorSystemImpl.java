@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer;
+package cloud.actor4j.analyzer;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import actor4j.core.ActorSystem;
-import actor4j.core.ActorSystemImpl;
-import actor4j.core.ActorThreadMode;
-import actor4j.core.DefaultActorSystemImpl;
+import cloud.actor4j.core.ActorSystem;
+import cloud.actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.ActorThreadMode;
+import cloud.actor4j.core.DefaultActorSystemImpl;
 
 public class AnalyzerActorSystemImpl extends DefaultActorSystemImpl {
 	protected AtomicBoolean analyzeMode;

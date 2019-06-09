@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer.visual;
+package cloud.actor4j.analyzer.visual;
 
 import java.awt.event.WindowEvent;
 import java.util.Map;
 import java.util.UUID;
 
-import actor4j.core.ActorCell;
-import actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.ActorCell;
+import cloud.actor4j.core.ActorSystemImpl;
 import tools4j.utils.SwingSubApplication;
 
 public class VisualActorAnalyzer {

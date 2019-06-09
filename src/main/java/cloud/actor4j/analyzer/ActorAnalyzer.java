@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer;
+package cloud.actor4j.analyzer;
 
-import actor4j.core.ActorSystem;
+import cloud.actor4j.core.ActorSystem;
 
 public class ActorAnalyzer extends ActorSystem {
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer.visual;
+package cloud.actor4j.analyzer.visual;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -24,8 +24,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import actor4j.core.ActorCell;
-import actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.ActorCell;
+import cloud.actor4j.core.ActorSystemImpl;
 
 public class VisualActorFrame extends JFrame {
 	protected static final long serialVersionUID = 6808210435112913511L;

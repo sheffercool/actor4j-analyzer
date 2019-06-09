@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer;
+package cloud.actor4j.analyzer;
 
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-import actor4j.core.ActorSystemImpl;
-import actor4j.core.ActorThread;
-import actor4j.core.DefaultActorMessageDispatcher;
-import actor4j.core.messages.ActorMessage;
+import cloud.actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.ActorThread;
+import cloud.actor4j.core.DefaultActorMessageDispatcher;
+import cloud.actor4j.core.messages.ActorMessage;
 
 public class AnalyzerActorMessageDispatcher extends DefaultActorMessageDispatcher {
 	public AnalyzerActorMessageDispatcher(ActorSystemImpl system) {

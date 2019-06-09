@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer.visual;
+package cloud.actor4j.analyzer.visual;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,8 +24,8 @@ import java.util.UUID;
 import com.mxgraph.layout.mxFastOrganicLayout;
 import com.mxgraph.layout.mxParallelEdgeLayout;
 
-import actor4j.core.ActorCell;
-import actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.ActorCell;
+import cloud.actor4j.core.ActorSystemImpl;
 
 public class VisualActorStructureViewPanel extends VisualActorViewPanel {
 	protected static final long serialVersionUID = -1192782222987329027L;

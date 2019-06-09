@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package actor4j.analyzer;
+package cloud.actor4j.analyzer;
 
 import java.util.Map;
 import java.util.UUID;
@@ -21,10 +21,10 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.swing.SwingUtilities;
 
-import actor4j.analyzer.visual.VisualActorAnalyzer;
-import actor4j.core.ActorCell;
-import actor4j.core.ActorSystemImpl;
-import actor4j.core.messages.ActorMessage;
+import cloud.actor4j.analyzer.visual.VisualActorAnalyzer;
+import cloud.actor4j.core.ActorCell;
+import cloud.actor4j.core.ActorSystemImpl;
+import cloud.actor4j.core.messages.ActorMessage;
 
 public class DefaultActorAnalyzerThread extends ActorAnalyzerThread {
 	protected VisualActorAnalyzer visualAnalyzer;
