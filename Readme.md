@@ -11,7 +11,7 @@ For further information on `Actor4j`, see the following more complete [documenta
 Following dependency from this site is involved:
 ```xml
 		<dependency>
-			<groupId>actor4j-core</groupId>
+			<groupId>io.actor4j</groupId>
 			<artifactId>actor4j-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
