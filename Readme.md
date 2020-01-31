@@ -6,16 +6,5 @@ This is the repository for Actor4j analyzer.
 
 For further information on `Actor4j`, see the following more complete [documentation](https://github.com/relvaner/actor4j-core).
 
-## Dependencies ##
-
-Following dependency from this site is involved:
-```xml
-		<dependency>
-			<groupId>io.actor4j</groupId>
-			<artifactId>actor4j-core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-```
-
 Page to be updated 07/14/2017
 
